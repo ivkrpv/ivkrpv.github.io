@@ -6,10 +6,11 @@ function selectMenuItem(path) {
 
 var config = {
   menu: [
+    // {
+    //   path: '../iphone-11pro',
+    //   title: '<i class="fa fa-mobile"></i>&nbsp;&nbsp;iPhone 11 Pro',
+    // },
     {
-      path: '../iphone-11pro',
-      title: '<i class="fa fa-mobile"></i>&nbsp;&nbsp;iPhone 11 Pro',
-    }, {
       title: '<i class="fa fa-mosque"></i>&nbsp;&nbsp;<span class="l-istanbul"></span>',
       items: [
         {
@@ -340,7 +341,7 @@ var config = {
     },
   },
 
-  slideshow: 14,
+  slideshow: 11,
 
   gallery: {
     'ist-part1': 46,
@@ -652,15 +653,15 @@ $(function () {
     });
   }
 
-  var slideshow = $('.slideshow');
+  const slideshow = $('.slideshow');
 
   if (slideshow.length) {
-    var count = config.slideshow;
+    const count = shuffle(Array.from(Array(config.slideshow).keys()).map(n => ++n));
 
-    if (count && count > 0) {
-      for (var n = count; n > 0; n--) {
-        slideshow.append('<img src="./assets/img/photography/slideshow/' + n + '.jpg" alt="">');
-      }
+    if (count && count.length) {
+      count.forEach(n => {
+        slideshow.append('<img src="./assets/img/photography/slideshow/' + n + '.jpeg" alt="">');
+      })
 
       slideshow.children().last().show();
 
@@ -884,3 +885,23 @@ function getUrlParameter(param) {
       }
   }
 };
+
+function shuffle(array) {
+  let currentIndex = array.length;
+  let temporaryValue;
+  let randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
