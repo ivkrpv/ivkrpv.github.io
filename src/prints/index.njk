@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+theme: light
+title: PRINTS
+metaImage: /images/prints.jpg
+---
+<div class="container px-4 pb-4">
+  <h2><span class="l-prints"></span></h2>
+  <p id="printsTags" class="lead font-italic text-uppercase"></p>
+  <div id="prints" class="my-5 d-flex justify-content-center align-items-center flex-wrap"></div>
+  <div class="fixed-bottom mb-5 flex-column align-items-center js-print-dashboard d-none">
+    <div class="d-flex rounded px-3 py-2 bg-dark-transparent text-light">
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-secondary btn-sm text-light l-back js-print-cancel">Назад</button>
+      </div>
+      <div class="d-flex align-items-center ml-5">
+        <div class="l-background">Фон</div>
+        <button type="button" class="btn btn-light btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="light"></button>
+        <button type="button" class="btn btn-dark btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="dark"></button>
+        <button type="button" class="btn btn-danger btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="danger"></button>
+        <button type="button" class="btn btn-primary btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="primary"></button>
+        <button type="button" class="btn btn-warning btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="warning"></button>
+        <button type="button" class="btn btn-success btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="success"></button>
+      </div>
+      <div class="d-flex align-items-center ml-4">
+        <div class="l-frame">Рамка</div>
+        <button type="button" class="btn btn-light btn-sm btn-color rounded-circle ml-2 js-print-frame" data-color="light"></button>
+        <button type="button" class="btn btn-dark btn-sm btn-color rounded-circle ml-2 js-print-frame" data-color="dark"></button>
+      </div>
+      <div class="d-flex align-items-center ml-4">
+        <div class="l-size">Размер</div>
+        <div class="btn-group btn-group-sm btn-group-toggle ml-2 js-print-size" data-toggle="buttons">
+          <label class="btn btn-dark l-size50x70" data-toggle="tooltip" data-placement="top" data-offset="0,10">
+            <input type="radio" name="size" autocomplete="off" value="50x70"> 50x70
+          </label>
+          <label class="btn btn-dark l-size61x91 active" data-toggle="tooltip" data-placement="top" data-offset="0,10">
+            <input type="radio" name="size" autocomplete="off" value="61x91" checked> 61x91
+          </label>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center ml-5 font-italic font-weight-bold js-print-price">
+        💸&nbsp;
+        <span class="l-price50x70 d-none"></span>
+        <span class="l-price61x91"></span>
+      </div>
+
+      <div class="d-flex align-items-center ml-5">
+        <button type="button" class="btn btn-primary btn-sm text-light l-next" data-toggle="modal" data-target="#newOrderModal">Далее</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Order modal -->
+<div class="modal fade text-body" id="newOrderModal" tabindex="-1" role="dialog" aria-labelledby="newOrder" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Новый заказ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="js-print-order-form" novalidate>
+          <div class="form-group">
+            <label for="email" class="col-form-label">Email</label>
+            <input type="email" class="form-control" name="email" placeholder="your@mail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contact" class="col-form-label">Контактная информация</label>
+            <textarea class="form-control" name="contact" rows="5" placeholder="Напишите сюда способ доставки. Это может быть самовывоз или встреча в Москве, либо доставка курьером по вашему адресу (оплачивается отдельно)." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Назад</button>
+        <button type="button" class="btn btn-primary js-print-order">
+          <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          <span>Заказать</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="newOrderSuccess" class="toast d-none" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="mr-auto">Новый заказ</strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body text-body">
+    Спасибо! Ваш заказ успешно создан.
+  </div>
+</div>
+<div id="newOrderError" class="toast d-none" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="mr-auto text-danger">Ошибка</strong>
+    <button type="button" class="ml-2 mb-1 close text-danger" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body text-danger">
+    При создании заказа произошла ошибка. Попробуйте позднее.
+  </div>
+</div>
+<!-- Order modal -->

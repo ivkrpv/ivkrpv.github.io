@@ -1,7 +1,5 @@
 function selectMenuItem(path) {
-  var purePath = path.replace(/[\/]/g, '');
-
-  return window.location.pathname.split('/').indexOf(purePath) != -1;
+  return window.location.pathname.indexOf(path) != -1;
 }
 
 var config = {
@@ -14,10 +12,10 @@ var config = {
       title: '<i class="fa fa-mosque"></i>&nbsp;&nbsp;<span class="l-istanbul"></span>',
       items: [
         {
-          path: '/istanbul-1/',
+          path: '/istanbul/2015/',
           title: '<span class="l-ist-p1-desc"></span>',
         }, {
-          path: '/istanbul-2/',
+          path: '/istanbul/2018/',
           title: '<span class="l-ist-p2-desc"></span>',
         },
       ],
@@ -25,13 +23,13 @@ var config = {
       title: '<i class="fa fa-mountain"></i>&nbsp;&nbsp;<span class="l-south"></span>',
       items: [
         {
-          path: '/south-mountains/',
+          path: '/south/mountains/',
           title: '<span class="l-south-mountains"></span>',
         }, {
-          path: '/south-404/',
+          path: '/south/404/',
           title: '<span class="l-south-404"></span>',
         }, {
-          path: '/south-coast/',
+          path: '/south/coast/',
           title: '<span class="l-south-coast"></span>',
         },
       ],
@@ -125,12 +123,12 @@ var config = {
       title: '<span class="l-prints"></span>',
     }, {
       path: 'https://instagram.com/ivkrpv/',
-      title: '<span title="Instagram" data-toggle="tooltip" data-placement="left"><i class="fab fa-instagram fa-lg"></i></span>',
+      title: '<span title="Instagram" data-toggle="tooltip" data-placement="left" data-offset="0,4"><i class="fab fa-instagram fa-lg"></i></span>',
       className: 'ml-lg-2',
       newTab: true,
     }, {
       path: 'https://medium.com/@ivkrpv',
-      title: '<span title="Medium" data-toggle="tooltip" data-placement="left"><i class="fab fa-medium fa-lg"></i></span>',
+      title: '<span title="Medium" data-toggle="tooltip" data-placement="left" data-offset="0,4"><i class="fab fa-medium fa-lg"></i></span>',
       newTab: true,
     }
   ],
@@ -523,7 +521,7 @@ $(function () {
       $li.addClass('dropdown');
 
       var $a = $('<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"></a>')
-        .html(item.title);
+        .html(item.title + '&nbsp;');
       var $submenu = $('<div class="dropdown-menu">');
 
       $.each(item.items, function (idx, subItem) {

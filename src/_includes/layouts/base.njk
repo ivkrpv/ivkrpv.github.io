@@ -1,3 +1,6 @@
+---
+theme: dark
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,10 +23,10 @@
     {% endfor %}
   </head>
 
-  <body class="bg-black text-white">
+  <body class="{{ 'bg-light text-dark' if theme === 'light' else 'bg-black text-white' }}">
     <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42981244 = new Ya.Metrika({ id:42981244, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42981244" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-4 py-3">
+    <nav class="navbar navbar-expand-lg {{ 'navbar-light' if theme === 'light' else 'navbar-dark' }} bg-transparent px-4 py-3">
       <a class="navbar-brand" href="/">
         <span class="logo">IV</span>
       </a>
@@ -36,7 +39,7 @@
     {{ content | safe }}
 
     <div class="bottom-buttons d-flex">
-      <div class="likely likely-small likely-light">
+      <div class="likely likely-small {{ 'likely-dark' if theme === 'light' else 'likely-light' }}">
         <div class="facebook mb-0 mt-1 l-share"></div>
         <div class="vkontakte mb-0 mt-1 l-share" data-title="{{ siteData.name }} — {{ title }}"></div>
         <div class="twitter mb-0 mt-1 l-share" data-title="{{ siteData.name }} — {{ title }}"></div>
