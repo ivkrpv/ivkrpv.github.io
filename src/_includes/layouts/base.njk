@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:title" content="{{ siteData.name }}"/>
     <meta property="og:description" content="{{ title }}"/>
-    <meta property="og:image" content="{{ metaImage }}" />
+    {% if metaImage %}
+      <meta property="og:image" content="{{ metaImage }}" />
+    {% endif %}
     <link rel="icon" href="/images/favicon.ico">
     <title>{{ siteData.name }} — {{ title }}</title>
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link href="/styles/all.min.css" rel="stylesheet">
     <link href="/styles/likely.css" rel="stylesheet">
     <link href="/styles/index.css" rel="stylesheet">
+    {% for style in pageStyle %}
+      <link href="{{ style }}" rel="stylesheet">
+    {% endfor %}
   </head>
 
   <body class="bg-black text-white">
@@ -46,6 +51,9 @@
     <script src="/scripts/bootstrap.bundle.min.js"></script>
     <script src="/scripts/likely.js"></script>
     <script src="/scripts/index.js"></script>
+    {% for script in pageScript %}
+      <script src="{{ script }}"></script>
+    {% endfor %}
   </body>
 
 </html>

@@ -39,67 +39,67 @@ var config = {
       title: '<i class="fa fa-city"></i>&nbsp;&nbsp;NYC',
       items: [
         {
-          path: '/nyc-part1/',
+          path: '/nyc/part1/',
           title: '<span class="l-part"></span> 1',
         }, {
-          path: '/nyc-part2/',
+          path: '/nyc/part2/',
           title: '<span class="l-part"></span> 2',
         }, {
-          path: '/nyc-part3/',
+          path: '/nyc/part3/',
           title: '<span class="l-part"></span> 3',
         }, {
-          path: '/nyc-part4/',
+          path: '/nyc/part4/',
           title: '<span class="l-part"></span> 4',
         }, {
-          path: '/nyc-part5/',
+          path: '/nyc/part5/',
           title: '<span class="l-part"></span> 5',
         }, {
-          path: '/nyc-part6/',
+          path: '/nyc/part6/',
           title: '<span class="l-part"></span> 6',
         }, {
-          path: '/nyc-part7/',
+          path: '/nyc/part7/',
           title: '<span class="l-part"></span> 7',
         }, {
-          path: '/nyc-part8/',
+          path: '/nyc/part8/',
           title: '<span class="l-part"></span> 8',
         }, {
-          path: '/nyc-part9/',
+          path: '/nyc/part9/',
           title: '<span class="l-part"></span> 9',
         }, {
-          path: '/nyc-part10/',
+          path: '/nyc/part10/',
           title: '<span class="l-part"></span> 10',
         }, {
-          path: '/nyc-part11/',
+          path: '/nyc/part11/',
           title: '<span class="l-part"></span> 11',
         }, {
-          path: '/nyc-part12/',
+          path: '/nyc/part12/',
           title: '<span class="l-part"></span> 12',
         }, {
-          path: '/nyc-part13/',
+          path: '/nyc/part13/',
           title: '<span class="l-part"></span> 13',
         }, {
-          path: '/nyc-part14/',
+          path: '/nyc/part14/',
           title: '<span class="l-part"></span> 14',
         }, {
-          path: '/nyc-part15/',
+          path: '/nyc/part15/',
           title: '<span class="l-part"></span> 15',
         }, {
-          path: '/nyc-part16/',
+          path: '/nyc/part16/',
           title: '<span class="l-part"></span> 16',
         }, {
-          path: '/nyc-part17/',
+          path: '/nyc/part17/',
           title: '<span class="l-part"></span> 17',
         }, {
-          path: '/nyc-part18/',
+          path: '/nyc/part18/',
           title: '<span class="l-part"></span> 18',
         }, {
-          path: '/nyc-part19/',
+          path: '/nyc/part19/',
           title: '<span class="l-part"></span> 19',
         }, {
-          path: '/nyc-part20/',
+          path: '/nyc/part20/',
           title: '<span class="l-part"></span> 20',
         }, {
-          path: '/nyc-map/',
+          path: '/nyc/',
           title: '<span class="l-map"></span>',
         },
       ],
