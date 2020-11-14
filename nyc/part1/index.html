@@ -8,8 +8,8 @@
     
     <link rel="shortcut icon" href="/images/favicon.ico">
     <title>IV — NYC - PART 1</title>
+    <link href="/styles/bootstrap-override.css" rel="stylesheet">
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-    <link href="/styles/all.min.css" rel="stylesheet">
     <link href="/styles/likely.css" rel="stylesheet">
     <link href="/styles/index.css" rel="stylesheet">
     
@@ -31,14 +31,14 @@
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav ml-auto text-uppercase font-italic">
           
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-mosque"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="istanbul">СТАМБУЛ</span>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-mosque"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="istanbul">СТАМБУЛ</span>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/istanbul/2015/"><span class="lcl" data-lcl="ist2015Desc">МАРТ 2015</span></a>
                   
                     <a class="dropdown-item " href="/istanbul/2018/"><span class="lcl" data-lcl="ist2018Desc">ОКТЯБРЬ 2018</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-mountain"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="south">ЮГ</span>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-mountain"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="south">ЮГ</span>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/south/mountains/"><span class="lcl" data-lcl="southMountains">ГОРЫ</span></a>
                   
@@ -47,7 +47,7 @@
                     <a class="dropdown-item " href="/south/coast/"><span class="lcl" data-lcl="southCoast">ПОБЕРЕЖЬЕ</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-city"></i>&nbsp;&nbsp;NYC&nbsp;</a>
+            <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-city"></i>&nbsp;&nbsp;NYC&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item active" href="/nyc/part1/"><span class="lcl" data-lcl="part">ЧАСТЬ</span> 1</a>
                   
@@ -92,7 +92,7 @@
                     <a class="dropdown-item " href="/nyc/map/"><span class="lcl" data-lcl="map">КАРТА</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-archive"></i>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-archive"></i>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/archive/street/"><span class="lcl" data-lcl="street">ГОРОДА</span></a>
                   
@@ -113,6 +113,13 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="https://unsplash.com/@ivkrpv" target="_blank">
+              <span title="" data-toggle="tooltip" data-placement="left" data-offset="0,4" data-original-title="Unsplash">
+                <i class="fab fa-unsplash fa-lg"></i>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://medium.com/@ivkrpv" target="_blank">
               <span title="" data-toggle="tooltip" data-placement="left" data-offset="0,4" data-original-title="Medium">
                 <i class="fab fa-medium fa-lg"></i>
@@ -126,7 +133,7 @@
 
     <div class="container-fluid px-4 pb-4">
   <h2 class="font-italic">NYC - <span class="lcl" data-lcl="part">ЧАСТЬ</span> 1</h2>
-  <p class="lead text-uppercase font-italic lcl" data-lcl="nycPart1Desc"><i class="fa fa-plane"></i> Гренландия, Бушвик, Уильямсберг, Ист-Ривер, Чайна-таун</p>
+  <p class="lead text-uppercase font-italic lcl" data-lcl="nycPart1Desc"><i class="fas fa-plane"></i> Гренландия, Бушвик, Уильямсберг, Ист-Ривер, Чайна-таун</p>
   <div class="gallery d-flex flex-wrap">
       <a class="flex-grow-1 mr-1 mb-1" href="/images/photography/nyc-part1/25.jpg">
         <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAgADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOhtEdYlU5z+tbSZnFWRaCYH3QfepuVY/wD/2Q==" alt="" loading="lazy" data-src="/images/photography/nyc-part1/25.jpg" class="lazyload" width="1024" height="683">
@@ -215,7 +222,7 @@
         <div class="twitter mb-0 mt-1 lcl" data-lcl="share" data-lcl-attr="title" data-title="IV — NYC - PART 1"></div>
       </div>
       <div class="lang-toggle ml-3 js-locale">
-        <i class="fa fa-globe" aria-hidden="true"></i> <span class="lcl" data-lcl="localeToggle">ENG</span>
+        <i class="fas fa-globe" aria-hidden="true"></i> <span class="lcl" data-lcl="localeToggle">ENG</span>
       </div>
     </div>
 
@@ -228,14 +235,16 @@
 
 
 <script>
-            (function(selector, src, preferNativeLazyLoad) {
+            (function (selector, src, preferNativeLazyLoad) {
   if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
     var images = document.querySelectorAll(selector);
     var numImages = images.length;
 
     if (numImages > 0) {
       for (var i = 0; i < numImages; i++) {
-        images[i].src = images[i].dataset.src;
+        if ('dataset' in images[i] && 'src' in images[i].dataset) {
+          images[i].src = images[i].dataset.src;
+        }
 
         if ('srcset' in images[i].dataset) {
           images[i].srcset = images[i].dataset.srcset;
@@ -251,7 +260,7 @@
   script.src = src;
   document.body.appendChild(script);
 })(
-              '.gallery img, #prints img',
+              '.gallery img, #prints img, #map-wc-content img',
               'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
               false
             );

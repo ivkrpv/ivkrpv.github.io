@@ -8,8 +8,8 @@
     
     <link rel="shortcut icon" href="/images/favicon.ico">
     <title>IV — PRINTS</title>
+    <link href="/styles/bootstrap-override.css" rel="stylesheet">
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-    <link href="/styles/all.min.css" rel="stylesheet">
     <link href="/styles/likely.css" rel="stylesheet">
     <link href="/styles/index.css" rel="stylesheet">
     
@@ -29,14 +29,14 @@
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav ml-auto text-uppercase font-italic">
           
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-mosque"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="istanbul">СТАМБУЛ</span>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-mosque"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="istanbul">СТАМБУЛ</span>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/istanbul/2015/"><span class="lcl" data-lcl="ist2015Desc">МАРТ 2015</span></a>
                   
                     <a class="dropdown-item " href="/istanbul/2018/"><span class="lcl" data-lcl="ist2018Desc">ОКТЯБРЬ 2018</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-mountain"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="south">ЮГ</span>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-mountain"></i>&nbsp;&nbsp;<span class="lcl" data-lcl="south">ЮГ</span>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/south/mountains/"><span class="lcl" data-lcl="southMountains">ГОРЫ</span></a>
                   
@@ -45,7 +45,7 @@
                     <a class="dropdown-item " href="/south/coast/"><span class="lcl" data-lcl="southCoast">ПОБЕРЕЖЬЕ</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-city"></i>&nbsp;&nbsp;NYC&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-city"></i>&nbsp;&nbsp;NYC&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/nyc/part1/"><span class="lcl" data-lcl="part">ЧАСТЬ</span> 1</a>
                   
@@ -90,7 +90,7 @@
                     <a class="dropdown-item " href="/nyc/map/"><span class="lcl" data-lcl="map">КАРТА</span></a>
                   </div>
               </li>
-            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-archive"></i>&nbsp;</a>
+            <li class="nav-item dropdown "><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-archive"></i>&nbsp;</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item " href="/archive/street/"><span class="lcl" data-lcl="street">ГОРОДА</span></a>
                   
@@ -111,6 +111,13 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="https://unsplash.com/@ivkrpv" target="_blank">
+              <span title="" data-toggle="tooltip" data-placement="left" data-offset="0,4" data-original-title="Unsplash">
+                <i class="fab fa-unsplash fa-lg"></i>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://medium.com/@ivkrpv" target="_blank">
               <span title="" data-toggle="tooltip" data-placement="left" data-offset="0,4" data-original-title="Medium">
                 <i class="fab fa-medium fa-lg"></i>
@@ -122,7 +129,7 @@
     </nav>
     <!-- Main menu -->
 
-    <div class="container px-4 pb-4">
+    <div class="container px-4">
   <h2 class="font-italic"><span class="lcl" data-lcl="prints">ПРИНТЫ</span></h2>
   <p id="printsTags" class="lead text-uppercase font-italic">
       <a href="#moscow" class="mr-2">#moscow</a>
@@ -132,10 +139,13 @@
       <a href="#berlin" class="mr-2">#berlin</a>
       <a href="#prague" class="mr-2">#prague</a>
   </p>
-  <div id="prints" class="my-5 d-flex justify-content-center align-items-center flex-wrap">
+</div>
+<div class="container px-4 pb-4 d-flex flex-wrap justify-content-center">
+  <div id="prints" class="d-flex justify-content-center flex-wrap">
       <a name="moscow" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          moscow
+          <span class="bg-dark text-white px-2">moscow</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -276,7 +286,8 @@
         </div>
       <a name="nyc" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          nyc
+          <span class="bg-dark text-white px-2">nyc</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -705,7 +716,8 @@
         </div>
       <a name="istanbul" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          istanbul
+          <span class="bg-dark text-white px-2">istanbul</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -846,7 +858,8 @@
         </div>
       <a name="sochi" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          sochi
+          <span class="bg-dark text-white px-2">sochi</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -1035,7 +1048,8 @@
         </div>
       <a name="berlin" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          berlin
+          <span class="bg-dark text-white px-2">berlin</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -1104,7 +1118,8 @@
         </div>
       <a name="prague" class="print-tag m-4 lead text-uppercase">
         <div class="h-100 d-flex justify-content-center align-items-center font-weight-bold">
-          prague
+          <span class="bg-dark text-white px-2">prague</span>
+          <i class="fas fa-arrow-right fa-lg ml-2" aria-hidden="true"></i>
         </div>
       </a>
         <div class="print-frame print-frame-thumb print-frame-dark m-4">
@@ -1140,49 +1155,49 @@
           </div>
         </div>
   </div>
-  <div class="fixed-bottom mb-5 flex-column align-items-center js-print-dashboard d-none">
-    <div class="d-flex rounded px-3 py-2 bg-dark-transparent text-light">
-      <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-secondary btn-sm text-light js-print-cancel">
-          <span class="lcl" data-lcl="back">Назад</span>
-        </button>
-      </div>
-      <div class="d-flex align-items-center ml-5">
-        <div class="lcl" data-lcl="background">Фон</div>
-        <button type="button" class="btn btn-light btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="light"></button>
-        <button type="button" class="btn btn-dark btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="dark"></button>
-        <button type="button" class="btn btn-danger btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="danger"></button>
-        <button type="button" class="btn btn-primary btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="primary"></button>
-        <button type="button" class="btn btn-warning btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="warning"></button>
-        <button type="button" class="btn btn-success btn-sm btn-color rounded-circle ml-2 js-print-bg" data-color="success"></button>
-      </div>
-      <div class="d-flex align-items-center ml-4">
-        <div class="lcl" data-lcl="frame">Рамка</div>
-        <button type="button" class="btn btn-light btn-sm btn-color rounded-circle ml-2 js-print-frame" data-color="light"></button>
-        <button type="button" class="btn btn-dark btn-sm btn-color rounded-circle ml-2 js-print-frame" data-color="dark"></button>
-      </div>
-      <div class="d-flex align-items-center ml-4">
-        <div class="lcl" data-lcl="size">Размер</div>
-        <div class="btn-group btn-group-sm btn-group-toggle ml-2 js-print-size" data-toggle="buttons">
-          <label class="btn btn-dark lcl" data-lcl="size50x70" data-lcl-attr="data-original-title" data-toggle="tooltip" data-placement="top" data-offset="0,10">
-            <input type="radio" name="size" autocomplete="off" value="50x70"> 50x70
-          </label>
-          <label class="btn btn-dark lcl active" data-lcl="size61x91" data-lcl-attr="data-original-title" data-toggle="tooltip" data-placement="top" data-offset="0,10">
-            <input type="radio" name="size" autocomplete="off" value="61x91" checked=""> 61x91
-          </label>
+  <div class="mt-4 d-none js-print-dashboard">
+    <div class="card">
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-4 d-flex align-items-center">
+            <div class="text-nowrap lcl" data-lcl="frame">Рамка</div>
+          </div>
+          <div class="col-8 d-flex align-items-center">
+            <button type="button" class="btn btn-light btn-sm btn-color rounded-circle border js-print-frame" data-color="light"></button>
+            <button type="button" class="btn btn-dark btn-sm btn-color rounded-circle ml-2 js-print-frame" data-color="dark"></button>
+          </div>
         </div>
-      </div>
 
-      <div class="d-flex align-items-center ml-5 js-print-price">
-        💸&nbsp;
-        <span class="d-none lcl" data-lcl="price50x70">3000₽</span>
-        <span class="lcl" data-lcl="price61x91">5000₽</span>
-      </div>
+        <div class="row">
+          <div class="col-4 d-flex align-items-center">
+            <div class="text-nowrap lcl" data-lcl="size">Размер</div>
+          </div>
+          <div class="col-8 d-flex align-items-center">
+            <div class="btn-group btn-group-sm btn-group-toggle js-print-size" data-toggle="buttons">
+              <label class="btn btn-primary lcl" data-lcl="size50x70" data-lcl-attr="data-original-title" data-toggle="tooltip" data-placement="top" data-offset="0,10">
+                <input type="radio" name="size" autocomplete="off" value="50x70"> 50x70
+              </label>
+              <label class="btn btn-primary lcl active" data-lcl="size61x91" data-lcl-attr="data-original-title" data-toggle="tooltip" data-placement="top" data-offset="0,10">
+                <input type="radio" name="size" autocomplete="off" value="61x91" checked="checked"> 61x91
+              </label>
+            </div>
+          </div>
+        </div>
 
-      <div class="d-flex align-items-center ml-5">
-        <button type="button" class="btn btn-primary btn-sm text-light" data-toggle="modal" data-target="#newOrderModal">
-          <span class="lcl" data-lcl="next">Далее</span>
-        </button>
+        <div class="d-flex justify-content-center my-3 lead js-print-price">
+          💸&nbsp;
+          <span class="d-none lcl" data-lcl="price50x70">3000₽</span>
+          <span class="lcl" data-lcl="price61x91">5000₽</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary btn-sm text-light js-print-cancel">
+            <span class="lcl" data-lcl="back">Назад</span>
+          </button>
+          <button type="button" class="btn btn-primary btn-sm text-light" data-toggle="modal" data-target="#newOrderModal">
+            <span class="lcl" data-lcl="next">Далее</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1252,7 +1267,7 @@
         <div class="twitter mb-0 mt-1 lcl" data-lcl="share" data-lcl-attr="title" data-title="IV — PRINTS"></div>
       </div>
       <div class="lang-toggle ml-3 js-locale">
-        <i class="fa fa-globe" aria-hidden="true"></i> <span class="lcl" data-lcl="localeToggle">ENG</span>
+        <i class="fas fa-globe" aria-hidden="true"></i> <span class="lcl" data-lcl="localeToggle">ENG</span>
       </div>
     </div>
 
@@ -1265,14 +1280,16 @@
 
 
 <script>
-            (function(selector, src, preferNativeLazyLoad) {
+            (function (selector, src, preferNativeLazyLoad) {
   if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
     var images = document.querySelectorAll(selector);
     var numImages = images.length;
 
     if (numImages > 0) {
       for (var i = 0; i < numImages; i++) {
-        images[i].src = images[i].dataset.src;
+        if ('dataset' in images[i] && 'src' in images[i].dataset) {
+          images[i].src = images[i].dataset.src;
+        }
 
         if ('srcset' in images[i].dataset) {
           images[i].srcset = images[i].dataset.srcset;
@@ -1288,7 +1305,7 @@
   script.src = src;
   document.body.appendChild(script);
 })(
-              '.gallery img, #prints img',
+              '.gallery img, #prints img, #map-wc-content img',
               'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
               false
             );
